@@ -1,0 +1,41 @@
+{
+  "@@locale": "es",
+
+  "appTitle": "LONI Admin",
+  "adminSubtitle": "Panel administrativo",
+
+  "signIn": "Iniciar sesión",
+  "emailLabel": "Correo electrónico",
+  "passwordLabel": "Contraseña",
+  "login": "Entrar",
+  "logout": "Cerrar sesión",
+  "back": "Atrás",
+
+  "pleaseFillAllFields": "Por favor completa todos los campos",
+  "loginFailed": "Error al iniciar sesión",
+
+  "dashboard": "Panel",
+  "users": "Usuarios",
+  "orders": "Pedidos",
+  "moderation": "Moderación",
+  "catalog": "Catálogo",
+  
+  "readingReport": "Informe de lectura",
+  "refresh": "Actualizar",
+  "viewJson": "Ver JSON",
+  "copyJson": "Copiar JSON",
+  "copiedToClipboard": "Copiado al portapapeles",
+  "close": "Cerrar",
+  "noDataAvailable": "No hay datos disponibles",
+  "notAvailable": "No disponible",
+
+  "usersManagement": "Gestión de usuarios",
+  "ordersManagement": "Gestión de pedidos",
+  "moderationTasks": "Tareas de moderación",
+  "catalogManagement": "Gestión del catálogo",
+
+  "usersManagementScreen": "Pantalla de gestión de usuarios",
+  "ordersManagementScreen": "Pantalla de gestión de pedidos",
+  "moderationTasksScreen": "Pantalla de tareas de moderación",
+  "catalogManagementScreen": "Pantalla de gestión del catálogo"
+}

@@ -1,0 +1,41 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "LONI Admin",
+  "adminSubtitle": "Administrative Dashboard",
+
+  "signIn": "Sign In",
+  "emailLabel": "Email",
+  "passwordLabel": "Password",
+  "login": "Login",
+  "logout": "Logout",
+  "back": "Back",
+
+  "pleaseFillAllFields": "Please fill all fields",
+  "loginFailed": "Login failed",
+
+  "dashboard": "Dashboard",
+  "users": "Users",
+  "orders": "Orders",
+  "moderation": "Moderation",
+  "catalog": "Catalog",
+
+  "readingReport": "Reading Report",
+  "refresh": "Refresh",
+  "viewJson": "View JSON",
+  "copyJson": "Copy JSON",
+  "copiedToClipboard": "Copied to clipboard",
+  "close": "Close",
+  "noDataAvailable": "No data available",
+  "notAvailable": "Not available",
+
+  "usersManagement": "Users Management",
+  "ordersManagement": "Orders Management",
+  "moderationTasks": "Moderation Tasks",
+  "catalogManagement": "Catalog Management",
+
+  "usersManagementScreen": "Users Management Screen",
+  "ordersManagementScreen": "Orders Management Screen",
+  "moderationTasksScreen": "Moderation Tasks Screen",
+  "catalogManagementScreen": "Catalog Management Screen"
+}
