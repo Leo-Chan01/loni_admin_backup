@@ -97,4 +97,26 @@ class AdminOrderService {
       };
     }
   }
+
+  Future<Map<String, dynamic>> reassignPrinter({
+    required String orderId,
+    required String printerId,
+  }) async {
+    try {
+      final response = await _apiClient.dio.post(
+        '/admin/orders/$orderId/reassign-printer',
+        data: {'printerId': printerId},
+      );
+
+      return {
+        'success': true,
+        'data': response.data,
+      };
+    } catch (e) {
+      return {
+        'success': false,
+        'message': e.toString(),
+      };
+    }
+  }
 }

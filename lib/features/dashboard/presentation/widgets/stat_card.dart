@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 class StatCard extends StatelessWidget {
   const StatCard({
@@ -10,20 +12,24 @@ class StatCard extends StatelessWidget {
 
   final String title;
   final String value;
-  final IconData icon;
+  final List<List<dynamic>> icon;
 
   @override
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(16.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(icon, size: 32, color: Theme.of(context).colorScheme.primary),
-            const SizedBox(height: 8),
+            HugeIcon(
+              icon: icon,
+              size: 32.sp,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+            SizedBox(height: 8.h),
             Text(title, style: Theme.of(context).textTheme.bodyMedium),
-            const SizedBox(height: 4),
+            SizedBox(height: 4.h),
             Text(value, style: Theme.of(context).textTheme.headlineMedium),
           ],
         ),

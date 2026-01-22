@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 enum SnackBarType { success, error, warning, info }
 
@@ -52,14 +54,18 @@ class GlobalSnackBar {
           duration: duration ?? const Duration(seconds: 3),
           backgroundColor: config.background,
           behavior: SnackBarBehavior.floating,
-          margin: const EdgeInsets.all(16),
+          margin: EdgeInsets.all(16.w),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(12.r),
           ),
           content: Row(
             children: [
-              Icon(config.icon, color: config.foreground, size: 20),
-              const SizedBox(width: 12),
+              HugeIcon(
+                icon: config.icon,
+                color: config.foreground,
+                size: 20.sp,
+              ),
+              SizedBox(width: 12.w),
               Expanded(
                 child: Text(
                   message,
@@ -81,25 +87,25 @@ class GlobalSnackBar {
         return _SnackBarConfig(
           background: scheme.secondaryContainer,
           foreground: scheme.onSecondaryContainer,
-          icon: Icons.check_circle,
+          icon: HugeIcons.strokeRoundedCheckList,
         );
       case SnackBarType.error:
         return _SnackBarConfig(
           background: scheme.errorContainer,
           foreground: scheme.onErrorContainer,
-          icon: Icons.error,
+          icon: HugeIcons.strokeRoundedAlert02,
         );
       case SnackBarType.warning:
         return _SnackBarConfig(
           background: scheme.tertiaryContainer,
           foreground: scheme.onTertiaryContainer,
-          icon: Icons.warning,
+          icon: HugeIcons.strokeRoundedAlert02,
         );
       case SnackBarType.info:
         return _SnackBarConfig(
           background: scheme.primaryContainer,
           foreground: scheme.onPrimaryContainer,
-          icon: Icons.info,
+          icon: HugeIcons.strokeRoundedInformationCircle,
         );
     }
   }
@@ -114,5 +120,5 @@ class _SnackBarConfig {
 
   final Color background;
   final Color foreground;
-  final IconData icon;
+  final List<List<dynamic>> icon;
 }

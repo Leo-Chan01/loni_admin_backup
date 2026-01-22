@@ -160,6 +160,36 @@ abstract class AppLocalizations {
   /// **'Login failed'**
   String get loginFailed;
 
+  /// No description provided for @updatedSuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Updated successfully'**
+  String get updatedSuccessfully;
+
+  /// No description provided for @updateFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Update failed'**
+  String get updateFailed;
+
+  /// No description provided for @invalidJsonPayload.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid JSON payload'**
+  String get invalidJsonPayload;
+
+  /// No description provided for @lastResult.
+  ///
+  /// In en, this message translates to:
+  /// **'Last result'**
+  String get lastResult;
+
+  /// No description provided for @update.
+  ///
+  /// In en, this message translates to:
+  /// **'Update'**
+  String get update;
+
   /// No description provided for @dashboard.
   ///
   /// In en, this message translates to:
@@ -189,6 +219,270 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Catalog'**
   String get catalog;
+
+  /// No description provided for @system.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get system;
+
+  /// No description provided for @health.
+  ///
+  /// In en, this message translates to:
+  /// **'Health'**
+  String get health;
+
+  /// No description provided for @overview.
+  ///
+  /// In en, this message translates to:
+  /// **'Overview'**
+  String get overview;
+
+  /// No description provided for @summary.
+  ///
+  /// In en, this message translates to:
+  /// **'Summary'**
+  String get summary;
+
+  /// No description provided for @audit.
+  ///
+  /// In en, this message translates to:
+  /// **'Audit'**
+  String get audit;
+
+  /// No description provided for @systemStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'System Status'**
+  String get systemStatus;
+
+  /// No description provided for @systemFeatures.
+  ///
+  /// In en, this message translates to:
+  /// **'System Features'**
+  String get systemFeatures;
+
+  /// No description provided for @systemRoles.
+  ///
+  /// In en, this message translates to:
+  /// **'System Roles'**
+  String get systemRoles;
+
+  /// No description provided for @systemSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'System Settings'**
+  String get systemSettings;
+
+  /// No description provided for @refunds.
+  ///
+  /// In en, this message translates to:
+  /// **'Refunds'**
+  String get refunds;
+
+  /// No description provided for @refundId.
+  ///
+  /// In en, this message translates to:
+  /// **'Refund ID'**
+  String get refundId;
+
+  /// No description provided for @updateRefund.
+  ///
+  /// In en, this message translates to:
+  /// **'Update refund'**
+  String get updateRefund;
+
+  /// No description provided for @economics.
+  ///
+  /// In en, this message translates to:
+  /// **'Economics'**
+  String get economics;
+
+  /// No description provided for @currentEconomics.
+  ///
+  /// In en, this message translates to:
+  /// **'Current economics'**
+  String get currentEconomics;
+
+  /// No description provided for @updateEconomics.
+  ///
+  /// In en, this message translates to:
+  /// **'Update economics'**
+  String get updateEconomics;
+
+  /// No description provided for @markets.
+  ///
+  /// In en, this message translates to:
+  /// **'Markets'**
+  String get markets;
+
+  /// No description provided for @regionPresets.
+  ///
+  /// In en, this message translates to:
+  /// **'Region presets'**
+  String get regionPresets;
+
+  /// No description provided for @updateRegionPresets.
+  ///
+  /// In en, this message translates to:
+  /// **'Update region presets'**
+  String get updateRegionPresets;
+
+  /// No description provided for @reporting.
+  ///
+  /// In en, this message translates to:
+  /// **'Reporting'**
+  String get reporting;
+
+  /// No description provided for @export.
+  ///
+  /// In en, this message translates to:
+  /// **'Export'**
+  String get export;
+
+  /// No description provided for @exportStarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Export started'**
+  String get exportStarted;
+
+  /// No description provided for @exportFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Export failed'**
+  String get exportFailed;
+
+  /// No description provided for @backorders.
+  ///
+  /// In en, this message translates to:
+  /// **'Backorders'**
+  String get backorders;
+
+  /// No description provided for @backordersSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Backorders summary'**
+  String get backordersSummary;
+
+  /// No description provided for @payouts.
+  ///
+  /// In en, this message translates to:
+  /// **'Payouts'**
+  String get payouts;
+
+  /// No description provided for @payoutBalances.
+  ///
+  /// In en, this message translates to:
+  /// **'Payout balances'**
+  String get payoutBalances;
+
+  /// No description provided for @payoutPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending payouts'**
+  String get payoutPending;
+
+  /// No description provided for @payoutStatements.
+  ///
+  /// In en, this message translates to:
+  /// **'Payout statements'**
+  String get payoutStatements;
+
+  /// No description provided for @payoutBatches.
+  ///
+  /// In en, this message translates to:
+  /// **'Payout batches'**
+  String get payoutBatches;
+
+  /// No description provided for @createBatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Create batch'**
+  String get createBatch;
+
+  /// No description provided for @runScheduler.
+  ///
+  /// In en, this message translates to:
+  /// **'Run scheduler'**
+  String get runScheduler;
+
+  /// No description provided for @exportBatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Export batch'**
+  String get exportBatch;
+
+  /// No description provided for @batchId.
+  ///
+  /// In en, this message translates to:
+  /// **'Batch ID'**
+  String get batchId;
+
+  /// No description provided for @create.
+  ///
+  /// In en, this message translates to:
+  /// **'Create'**
+  String get create;
+
+  /// No description provided for @run.
+  ///
+  /// In en, this message translates to:
+  /// **'Run'**
+  String get run;
+
+  /// No description provided for @submit.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit'**
+  String get submit;
+
+  /// No description provided for @revenueSplits.
+  ///
+  /// In en, this message translates to:
+  /// **'Revenue splits'**
+  String get revenueSplits;
+
+  /// No description provided for @revenueSplitId.
+  ///
+  /// In en, this message translates to:
+  /// **'Revenue split ID'**
+  String get revenueSplitId;
+
+  /// No description provided for @loadDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Load detail'**
+  String get loadDetail;
+
+  /// No description provided for @detail.
+  ///
+  /// In en, this message translates to:
+  /// **'Detail'**
+  String get detail;
+
+  /// No description provided for @preview.
+  ///
+  /// In en, this message translates to:
+  /// **'Preview'**
+  String get preview;
+
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// No description provided for @ledger.
+  ///
+  /// In en, this message translates to:
+  /// **'Ledger'**
+  String get ledger;
+
+  /// No description provided for @ledgerAdjustment.
+  ///
+  /// In en, this message translates to:
+  /// **'Ledger adjustment'**
+  String get ledgerAdjustment;
 
   /// No description provided for @readingReport.
   ///
@@ -220,6 +514,18 @@ abstract class AppLocalizations {
   /// **'Copied to clipboard'**
   String get copiedToClipboard;
 
+  /// No description provided for @jsonPayload.
+  ///
+  /// In en, this message translates to:
+  /// **'JSON payload'**
+  String get jsonPayload;
+
+  /// No description provided for @jsonPayloadHint.
+  ///
+  /// In en, this message translates to:
+  /// **'\"key\": \"value\"'**
+  String get jsonPayloadHint;
+
   /// No description provided for @close.
   ///
   /// In en, this message translates to:
@@ -237,6 +543,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Not available'**
   String get notAvailable;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @searchQuery.
+  ///
+  /// In en, this message translates to:
+  /// **'Search query'**
+  String get searchQuery;
+
+  /// No description provided for @searchResults.
+  ///
+  /// In en, this message translates to:
+  /// **'Search results'**
+  String get searchResults;
 
   /// No description provided for @usersManagement.
   ///
@@ -261,6 +585,270 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Catalog Management'**
   String get catalogManagement;
+
+  /// No description provided for @searchUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'Search users'**
+  String get searchUsers;
+
+  /// No description provided for @roleOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Role (optional)'**
+  String get roleOptional;
+
+  /// No description provided for @userDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'User detail'**
+  String get userDetail;
+
+  /// No description provided for @userId.
+  ///
+  /// In en, this message translates to:
+  /// **'User ID'**
+  String get userId;
+
+  /// No description provided for @updateUser.
+  ///
+  /// In en, this message translates to:
+  /// **'Update user'**
+  String get updateUser;
+
+  /// No description provided for @suspend.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspend'**
+  String get suspend;
+
+  /// No description provided for @activate.
+  ///
+  /// In en, this message translates to:
+  /// **'Activate'**
+  String get activate;
+
+  /// No description provided for @softDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Soft delete'**
+  String get softDelete;
+
+  /// No description provided for @ordersList.
+  ///
+  /// In en, this message translates to:
+  /// **'Orders list'**
+  String get ordersList;
+
+  /// No description provided for @orderKpis.
+  ///
+  /// In en, this message translates to:
+  /// **'Order KPIs'**
+  String get orderKpis;
+
+  /// No description provided for @orderDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Order detail'**
+  String get orderDetail;
+
+  /// No description provided for @orderId.
+  ///
+  /// In en, this message translates to:
+  /// **'Order ID'**
+  String get orderId;
+
+  /// No description provided for @cancelOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel order'**
+  String get cancelOrder;
+
+  /// No description provided for @escalateOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'Escalate order'**
+  String get escalateOrder;
+
+  /// No description provided for @reassignPrinter.
+  ///
+  /// In en, this message translates to:
+  /// **'Reassign printer'**
+  String get reassignPrinter;
+
+  /// No description provided for @printerId.
+  ///
+  /// In en, this message translates to:
+  /// **'Printer ID'**
+  String get printerId;
+
+  /// No description provided for @moderationTasksList.
+  ///
+  /// In en, this message translates to:
+  /// **'Moderation tasks list'**
+  String get moderationTasksList;
+
+  /// No description provided for @taskActions.
+  ///
+  /// In en, this message translates to:
+  /// **'Task actions'**
+  String get taskActions;
+
+  /// No description provided for @taskId.
+  ///
+  /// In en, this message translates to:
+  /// **'Task ID'**
+  String get taskId;
+
+  /// No description provided for @loadEvents.
+  ///
+  /// In en, this message translates to:
+  /// **'Load events'**
+  String get loadEvents;
+
+  /// No description provided for @taskDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Task detail'**
+  String get taskDetail;
+
+  /// No description provided for @taskEvents.
+  ///
+  /// In en, this message translates to:
+  /// **'Task events'**
+  String get taskEvents;
+
+  /// No description provided for @updateTaskStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Update task status'**
+  String get updateTaskStatus;
+
+  /// No description provided for @status.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get status;
+
+  /// No description provided for @reviewerNotesOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Reviewer notes (optional)'**
+  String get reviewerNotesOptional;
+
+  /// No description provided for @noteOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Note (optional)'**
+  String get noteOptional;
+
+  /// No description provided for @downloadEpub.
+  ///
+  /// In en, this message translates to:
+  /// **'Download EPUB'**
+  String get downloadEpub;
+
+  /// No description provided for @catalogFlags.
+  ///
+  /// In en, this message translates to:
+  /// **'Catalog flags'**
+  String get catalogFlags;
+
+  /// No description provided for @catalogComplianceRules.
+  ///
+  /// In en, this message translates to:
+  /// **'Catalog compliance rules'**
+  String get catalogComplianceRules;
+
+  /// No description provided for @catalogFeatured.
+  ///
+  /// In en, this message translates to:
+  /// **'Catalog featured'**
+  String get catalogFeatured;
+
+  /// No description provided for @contentSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Content search'**
+  String get contentSearch;
+
+  /// No description provided for @catalogItem.
+  ///
+  /// In en, this message translates to:
+  /// **'Catalog item'**
+  String get catalogItem;
+
+  /// No description provided for @itemId.
+  ///
+  /// In en, this message translates to:
+  /// **'Item ID'**
+  String get itemId;
+
+  /// No description provided for @itemCompliance.
+  ///
+  /// In en, this message translates to:
+  /// **'Item compliance'**
+  String get itemCompliance;
+
+  /// No description provided for @updateItemCompliance.
+  ///
+  /// In en, this message translates to:
+  /// **'Update item compliance'**
+  String get updateItemCompliance;
+
+  /// No description provided for @simulateCompliance.
+  ///
+  /// In en, this message translates to:
+  /// **'Simulate compliance'**
+  String get simulateCompliance;
+
+  /// No description provided for @updateFlagStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Update flag status'**
+  String get updateFlagStatus;
+
+  /// No description provided for @flagId.
+  ///
+  /// In en, this message translates to:
+  /// **'Flag ID'**
+  String get flagId;
+
+  /// No description provided for @setFeatured.
+  ///
+  /// In en, this message translates to:
+  /// **'Set featured'**
+  String get setFeatured;
+
+  /// No description provided for @lifecycle.
+  ///
+  /// In en, this message translates to:
+  /// **'Lifecycle'**
+  String get lifecycle;
+
+  /// No description provided for @schedule.
+  ///
+  /// In en, this message translates to:
+  /// **'Schedule'**
+  String get schedule;
+
+  /// No description provided for @publish.
+  ///
+  /// In en, this message translates to:
+  /// **'Publish'**
+  String get publish;
+
+  /// No description provided for @unpublish.
+  ///
+  /// In en, this message translates to:
+  /// **'Unpublish'**
+  String get unpublish;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
 
   /// No description provided for @usersManagementScreen.
   ///

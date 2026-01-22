@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hugeicons/hugeicons.dart';
 import 'package:provider/provider.dart';
 
 import '../../../dashboard/data/services/admin_dashboard_service.dart';
@@ -54,7 +56,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
           title: Text(context.l10n.dashboard),
           actions: [
             IconButton(
-              icon: const Icon(Icons.logout),
+              tooltip: context.l10n.logout,
+              icon: const HugeIcon(icon: HugeIcons.strokeRoundedLogout01),
               onPressed: () async {
                 await context.read<AdminAuthProvider>().signOut();
                 if (!context.mounted) return;
@@ -66,7 +69,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         body: _isLoading
             ? const Center(child: CircularProgressIndicator())
             : SingleChildScrollView(
-                padding: const EdgeInsets.all(16),
+                padding: EdgeInsets.all(16.w),
                 child: Column(
                   children: [
                     Row(
@@ -75,40 +78,40 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           child: StatCard(
                             title: context.l10n.users,
                             value: 0.toString(),
-                            icon: Icons.people,
+                            icon: HugeIcons.strokeRoundedUser,
                           ),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16.w),
                         Expanded(
                           child: StatCard(
                             title: context.l10n.orders,
                             value: 0.toString(),
-                            icon: Icons.shopping_cart,
+                            icon: HugeIcons.strokeRoundedShoppingBag01,
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     Row(
                       children: [
                         Expanded(
                           child: StatCard(
                             title: context.l10n.moderation,
                             value: 0.toString(),
-                            icon: Icons.assignment,
+                            icon: HugeIcons.strokeRoundedShieldUser,
                           ),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16.w),
                         Expanded(
                           child: StatCard(
                             title: context.l10n.catalog,
                             value: 0.toString(),
-                            icon: Icons.library_books,
+                            icon: HugeIcons.strokeRoundedBook02,
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     Consumer<AdminReadingReportProvider>(
                       builder: (context, provider, _) {
                         return ReadingReportCard(
@@ -119,33 +122,78 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         );
                       },
                     ),
-                    const SizedBox(height: 32),
+                    SizedBox(height: 32.h),
                     GridView.count(
                       crossAxisCount: 2,
-                      mainAxisSpacing: 16,
-                      crossAxisSpacing: 16,
+                      mainAxisSpacing: 16.h,
+                      crossAxisSpacing: 16.w,
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
                       children: [
                         MenuCard(
                           title: context.l10n.users,
-                          icon: Icons.people,
+                          icon: HugeIcons.strokeRoundedUser,
                           onTap: () => context.go('/users'),
                         ),
                         MenuCard(
                           title: context.l10n.orders,
-                          icon: Icons.shopping_cart,
+                          icon: HugeIcons.strokeRoundedShoppingBag01,
                           onTap: () => context.go('/orders'),
                         ),
                         MenuCard(
                           title: context.l10n.moderation,
-                          icon: Icons.assignment,
+                          icon: HugeIcons.strokeRoundedShieldUser,
                           onTap: () => context.go('/moderation'),
                         ),
                         MenuCard(
                           title: context.l10n.catalog,
-                          icon: Icons.library_books,
+                          icon: HugeIcons.strokeRoundedBook02,
                           onTap: () => context.go('/catalog'),
+                        ),
+                        MenuCard(
+                          title: context.l10n.system,
+                          icon: HugeIcons.strokeRoundedSettings01,
+                          onTap: () => context.go('/system'),
+                        ),
+                        MenuCard(
+                          title: context.l10n.refunds,
+                          icon: HugeIcons.strokeRoundedInvoice01,
+                          onTap: () => context.go('/refunds'),
+                        ),
+                        MenuCard(
+                          title: context.l10n.economics,
+                          icon: HugeIcons.strokeRoundedCoins01,
+                          onTap: () => context.go('/economics'),
+                        ),
+                        MenuCard(
+                          title: context.l10n.markets,
+                          icon: HugeIcons.strokeRoundedGlobal,
+                          onTap: () => context.go('/markets'),
+                        ),
+                        MenuCard(
+                          title: context.l10n.reporting,
+                          icon: HugeIcons.strokeRoundedChartLineData01,
+                          onTap: () => context.go('/reporting'),
+                        ),
+                        MenuCard(
+                          title: context.l10n.backorders,
+                          icon: HugeIcons.strokeRoundedPackageProcess,
+                          onTap: () => context.go('/backorders'),
+                        ),
+                        MenuCard(
+                          title: context.l10n.payouts,
+                          icon: HugeIcons.strokeRoundedMoney01,
+                          onTap: () => context.go('/payouts'),
+                        ),
+                        MenuCard(
+                          title: context.l10n.revenueSplits,
+                          icon: HugeIcons.strokeRoundedChartDecrease,
+                          onTap: () => context.go('/revenue-splits'),
+                        ),
+                        MenuCard(
+                          title: context.l10n.ledger,
+                          icon: HugeIcons.strokeRoundedDatabase,
+                          onTap: () => context.go('/ledger'),
                         ),
                       ],
                     ),

@@ -105,4 +105,22 @@ class AdminUserService {
       };
     }
   }
+
+  Future<Map<String, dynamic>> softDeleteUser(String userId) async {
+    try {
+      final response = await _apiClient.dio.post(
+        '/admin/users/$userId/soft-delete',
+      );
+
+      return {
+        'success': true,
+        'data': response.data,
+      };
+    } catch (e) {
+      return {
+        'success': false,
+        'message': e.toString(),
+      };
+    }
+  }
 }

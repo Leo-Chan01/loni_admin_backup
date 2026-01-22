@@ -1,3 +1,5 @@
+import 'package:dio/dio.dart';
+
 import '../../../../core/services/api_client.dart';
 
 class AdminModerationService {
@@ -83,6 +85,28 @@ class AdminModerationService {
       return {
         'success': true,
         'data': response.data,
+      };
+    } catch (e) {
+      return {
+        'success': false,
+        'message': e.toString(),
+      };
+    }
+  }
+
+  Future<Map<String, dynamic>> downloadTaskEpub(String taskId) async {
+    try {
+      final response = await _apiClient.dio.get(
+        '/admin/moderation/tasks/$taskId/epub',
+        options: Options(responseType: ResponseType.bytes),
+      );
+
+      return {
+        'success': true,
+        'data': {
+          'bytesLength': (response.data as List<int>?)?.length ?? 0,
+        },
+        'bytes': response.data,
       };
     } catch (e) {
       return {

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../l10n/l10n_extensions.dart';
 import '../../../../shared/widgets/global_snackbar.dart';
+import '../../../../shared/widgets/auth_text_field.dart';
+import '../../../../shared/widgets/primary_button.dart';
 import '../provider/admin_auth_provider.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -52,59 +55,41 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(24),
+          padding: EdgeInsets.all(24.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 40),
+              SizedBox(height: 40.h),
               Text(
                 context.l10n.appTitle,
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: 8.h),
               Text(
                 context.l10n.adminSubtitle,
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
-              const SizedBox(height: 48),
-              TextField(
+              SizedBox(height: 48.h),
+              AuthTextField(
+                label: context.l10n.emailLabel,
+                hintText: context.l10n.emailLabel,
                 controller: _emailController,
-                decoration: InputDecoration(
-                  labelText: context.l10n.emailLabel,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
+                keyboardType: TextInputType.emailAddress,
               ),
-              const SizedBox(height: 16),
-              TextField(
+              SizedBox(height: 16.h),
+              AuthTextField(
+                label: context.l10n.passwordLabel,
+                hintText: context.l10n.passwordLabel,
                 controller: _passwordController,
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: context.l10n.passwordLabel,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
+                isPassword: true,
               ),
-              const SizedBox(height: 32),
-              SizedBox(
-                width: double.infinity,
-                height: 48,
-                child: ElevatedButton(
-                  onPressed: auth.isLoading ? null : _login,
-                  child: auth.isLoading
-                      ? const SizedBox(
-                          height: 24,
-                          width: 24,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                          ),
-                        )
-                      : Text(context.l10n.login),
-                ),
+              SizedBox(height: 32.h),
+              PrimaryButton(
+                label: context.l10n.login,
+                isLoading: auth.isLoading,
+                onPressed: _login,
               ),
-              const SizedBox(height: 40),
+              SizedBox(height: 40.h),
             ],
           ),
         ),

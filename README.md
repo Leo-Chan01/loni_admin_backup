@@ -37,6 +37,16 @@ A Flutter-based administrative dashboard for the LONI Africa platform. This appl
 - Update compliance rules
 - Monitor catalog compliance status
 
+### 6. **Finance & Operations**
+- Refunds: list + update
+- Economics: view + update
+- Markets: view + update region presets
+- Reporting: view + export
+- Backorders: list + summary
+- Payouts: balances/pending/statements/batches + create batch + run scheduler + export batch
+- Revenue splits: list/detail + create/update/delete + preview
+- Ledger: post adjustments
+
 ## Project Structure
 
 ```
@@ -145,6 +155,10 @@ Authorization: Bearer <access_token>
 - `GET /v1/admin/overview` - Dashboard overview
 - `GET /v1/admin/summary` - Admin summary
 - `GET /v1/admin/audit` - Audit logs
+- `GET /v1/admin/system/status` - System status
+- `GET /v1/admin/system/features` - Feature flags
+- `GET /v1/admin/system/roles` - Roles
+- `GET /v1/admin/system/settings` - Settings
 
 #### Users
 - `GET /v1/admin/users` - List users (searchable)
@@ -152,6 +166,7 @@ Authorization: Bearer <access_token>
 - `PATCH /v1/admin/users/:userId` - Update user
 - `POST /v1/admin/users/:userId/suspend` - Suspend user
 - `POST /v1/admin/users/:userId/activate` - Activate user
+- `POST /v1/admin/users/:userId/soft-delete` - Soft delete (anonymize) user
 
 #### Orders
 - `GET /v1/admin/orders` - List orders
@@ -159,18 +174,96 @@ Authorization: Bearer <access_token>
 - `POST /v1/admin/orders/:orderId/cancel` - Cancel order
 - `POST /v1/admin/orders/:orderId/escalate` - Escalate order
 - `GET /v1/admin/orders/kpis` - Order KPIs
+- `POST /v1/admin/orders/:orderId/reassign-printer` - Reassign printer
 
 #### Moderation
 - `GET /v1/admin/moderation/tasks` - List moderation tasks
 - `GET /v1/admin/moderation/tasks/:taskId` - Get task detail
 - `GET /v1/admin/moderation/tasks/:taskId/events` - Get task events
 - `PATCH /v1/admin/moderation/tasks/:taskId` - Update task status
+- `GET /v1/admin/moderation/tasks/:taskId/epub` - Download EPUB
 
 #### Catalog
 - `GET /v1/admin/catalog/flags` - List compliance flags
+- `GET /v1/admin/catalog/compliance` - List compliance rules
+- `POST /v1/admin/catalog/compliance` - Create compliance rule
+- `PATCH /v1/admin/catalog/compliance/:ruleId` - Update compliance rule
+- `DELETE /v1/admin/catalog/compliance/:ruleId` - Delete compliance rule
+- `POST /v1/admin/catalog/compliance/simulate` - Simulate compliance
+- `GET /v1/admin/catalog/featured` - List featured
+- `POST /v1/admin/catalog/featured/:itemId` - Set featured
+- `GET /v1/admin/content/search` - Search content
+- `GET /v1/admin/catalog/items/:itemId` - Get item detail
 - `GET /v1/admin/catalog/items/:itemId/compliance` - Get item compliance
 - `POST /v1/admin/catalog/items/:itemId/compliance` - Update compliance
 - `POST /v1/admin/catalog/flags/:flagId/status` - Update flag status
+- `PUT /v1/admin/catalog/items/:itemId/lifecycle/schedule` - Schedule lifecycle
+- `POST /v1/admin/catalog/items/:itemId/lifecycle/publish` - Publish lifecycle
+- `POST /v1/admin/catalog/items/:itemId/lifecycle/unpublish` - Unpublish lifecycle
+- `POST /v1/admin/catalog/items/:itemId/lifecycle/cancel` - Cancel lifecycle
+
+#### Refunds
+- `GET /v1/admin/refunds` - List refunds
+- `PATCH /v1/admin/refunds/:refundId` - Update refund
+
+#### Economics
+- `GET /v1/admin/economics` - Get economics
+- `PUT /v1/admin/economics` - Update economics
+
+#### Markets
+- `GET /v1/admin/markets/region-presets` - Get region presets
+- `PUT /v1/admin/markets/region-presets` - Update region presets
+
+#### Reporting
+- `GET /v1/admin/reporting` - Get reporting
+- `GET /v1/admin/reporting/export` - Export reporting
+
+#### Backorders
+- `GET /v1/admin/backorders/summary` - Backorders summary
+- `GET /v1/admin/backorders` - List backorders
+
+#### Payouts
+- `GET /v1/admin/payouts/balances` - Payout balances
+- `GET /v1/admin/payouts/pending` - Pending payouts
+- `GET /v1/admin/payouts/statements` - Payout statements
+- `GET /v1/admin/payouts/batches` - Payout batches
+- `POST /v1/admin/payouts/batch` - Create payout batch
+- `POST /v1/admin/payouts/scheduler/run` - Run scheduler
+- `GET /v1/admin/payouts/batches/:batchId/export` - Export batch
+
+#### Revenue Splits
+- `GET /v1/admin/revenue-splits` - List revenue splits
+- `GET /v1/admin/revenue-splits/:splitId` - Get split
+- `POST /v1/admin/revenue-splits` - Create split
+- `PUT /v1/admin/revenue-splits/:splitId` - Update split
+- `DELETE /v1/admin/revenue-splits/:splitId` - Delete split
+- `POST /v1/admin/revenue-splits/preview` - Preview split
+
+#### Ledger
+- `POST /v1/admin/ledger/adjustment` - Post ledger adjustment
+
+### API Implementation Status
+
+Status key:
+- ✅ Implemented end-to-end (service + provider + screen)
+- ⚠️ Implemented, but export/download bytes are currently surfaced as metadata (e.g., `bytesLength`) rather than being saved to a file
+
+As of 2026-01-14:
+- ✅ Auth: login + refresh
+- ✅ Dashboard: overview widgets and navigation
+- ✅ System: health/overview/summary/audit + system status/features/roles/settings
+- ✅ Users: search/detail/update + suspend/activate/soft-delete
+- ✅ Orders: list/detail/KPIs + cancel/escalate + reassign printer
+- ✅ Moderation: tasks/detail/events + update status + EPUB download ⚠️
+- ✅ Catalog: flags/rules/featured + content search + item detail/compliance + simulate + lifecycle ops
+- ✅ Refunds: list + update
+- ✅ Economics: get + update
+- ✅ Markets: get + update region presets
+- ✅ Reporting: get + export ⚠️
+- ✅ Backorders: summary + list
+- ✅ Payouts: balances/pending/statements/batches + create batch + run scheduler + export ⚠️
+- ✅ Revenue splits: list/detail + create/update/delete + preview
+- ✅ Ledger: adjustment
 
 ## Architecture
 

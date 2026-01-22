@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 class MenuCard extends StatelessWidget {
   const MenuCard({
@@ -9,7 +11,7 @@ class MenuCard extends StatelessWidget {
   });
 
   final String title;
-  final IconData icon;
+  final List<List<dynamic>> icon;
   final VoidCallback onTap;
 
   @override
@@ -21,12 +23,12 @@ class MenuCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                icon,
-                size: 48,
+              HugeIcon(
+                icon: icon,
+                size: 48.sp,
                 color: Theme.of(context).colorScheme.primary,
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               Text(title, style: Theme.of(context).textTheme.titleLarge),
             ],
           ),
